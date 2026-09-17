@@ -5,6 +5,7 @@ Spring Boot / Java 17 service with a MongoDB cache for show details.
 ## Endpoints
 
 - `GET /api/shows/{show_id}`: returns the complete show object. It first checks MongoDB's `show_cache` collection; on a cache miss it calls TVMaze, stores the result, and returns it.
+- `POST /api/shows/{show_id}/comments`: stores a comment and rating (0–5) in MongoDB's `show_comments` collection and returns `201 Created`.
 
 ## MongoDB configuration
 
